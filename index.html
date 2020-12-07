@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découverte de js</title>
+</head>
+<body>
+    <script>
+        //BOUCLES
+        // exercice 1
+        for (let i=0 ; i<11; i++){
+            console.log(i);
+        }
+
+        //exercice2
+        let ex2Var1 = 0;
+        let ex2Var2 = 23;
+        while (ex2Var1 < 21){
+            let resultat = ex2Var1*ex2Var2;
+            console.log(resultat);
+            ex2Var1++;
+        }
+
+        //exercice3
+        let ex3Var1 = 100;
+        let ex3Var2 = 11;
+        while (ex3Var1 > 9){
+            let resultat = ex3Var1*ex3Var2;
+            console.log(resultat);
+            ex3Var1--;
+        }
+
+        //exercice4
+        let ex4Var1 = 1;
+        while (ex4Var1 < 11){
+            console.log(ex4Var1);
+            ex4Var1=1.5*ex4Var1;
+        }
+
+        //exercice5
+        for (let i=1; i<16; i++){
+            console.log(i+' on y arrive presque...');
+        }
+
+        //exercice6
+        for (let i=20; i>-1; i--){
+            console.log(i + ' c\'est presque bon...');
+        }
+
+        //exercice7
+        for (let i=0; i<101; i+=15){
+            console.log(i + ' on tient le bon bout');
+        }
+
+        //exercice8
+        for (let i=200; i>-1; i-=12){
+            console.log(i + ' enfin!');
+        }
+
+        //FONCTIONS
+        //exercice1
+        function returnTrue(){
+            console.log(true);
+        }
+        returnTrue();
+
+        //exercice2
+        function returnChaine(chaine){
+            console.log(chaine);
+        }
+        returnChaine('mon test de chaine');
+
+        //exercice3
+        function concatChaines(chaine1, chaine2){
+            console.log(chaine1 + chaine2);
+        }
+        concatChaines('ceci est', ' bon');
+
+        //exercice4
+        function returnPlusGrand(nb1, nb2){
+            if (nb1>nb2){console.log(nb1 + ' est plus grand que '+ nb2);}
+            if (nb1<nb2){console.log(nb1 + ' est plus petit que '+ nb2);}
+            if (nb1==nb2){console.log(nb1 + ' et '+ nb2 + ' sont égaux');}
+        }
+        returnPlusGrand(3,6);
+        returnPlusGrand(6,3);
+        returnPlusGrand(11,11);
+
+        //exercice5
+        function concatChaineNb(chaine, nb){
+            console.log(chaine+nb);
+        }
+        concatChaineNb('ceci vaut ', 9);
+
+        //exercice6
+        function bonjour(nom, prenom, age){
+            console.log('Bonjour '+ prenom +' '+ nom + ', tu as ' + age +' ans!');
+        }
+        bonjour('Noisette', 'Cédric', 38);
+
+        //exercice7
+        function genre(age, genre){
+            if (genre=='Homme'){
+                if (age<18){console.log('Vous êtes un homme mineur')}
+                else{console.log('Vous êtes un homme majeur')};
+            }
+            if (genre=='Femme'){
+                if (age<18){console.log('Vous êtes une femme mineure')}
+                else{console.log('Vous êtes une femme majeure')};
+            }
+        }
+        genre(12,'Homme');
+        genre(21,'Homme');
+        genre(17,'Femme');
+        genre(71,'Femme');
+
+        //exercice8
+        function somme3(nb1,nb2,nb3){
+            let resultat = nb1+nb2+nb3;
+            console.log('la somme de ces 3 nombres est de ' + resultat);
+        }
+        somme3(2,7,3);
+
+        //TABLEAUX
+        //exercice1
+        let mois=['janvier','fevrier','mars','avril','mai','juin','juillet','aout','septembre','octobre','novembre','décembre'];
+
+        //exercice2
+        console.log(mois[2]);
+
+        //exercice3
+        console.log(mois[5]);
+
+        //exercice4
+        mois.splice(7,1,'août');
+        console.log(mois[7]);
+
+        //exercice5
+        let hautDeFrance = {2:'Aisne', 59:'Nord', 60:'OIse', 62:'Pas de Calais', 80:'Somme'};
+
+        //exercice6
+        console.log(hautDeFrance[59]);
+
+        //exercice7
+        let departement = 'Marne';
+        let valeur = 51;
+        hautDeFrance[valeur]=departement;
+        console.log(hautDeFrance);
+
+        //exercice8
+        for (let i=0; i<mois.length; i++){
+            console.log(mois[i]);
+        }
+
+        //exercice9
+        for (const property in hautDeFrance) {
+            console.log(`${property}: ${hautDeFrance[property]}`);
+        }
+
+        //exercice10
+        for (const property in hautDeFrance) {
+            console.log(`Le département ${hautDeFrance[property]} a le numéro ${property}`);
+        }
+
+    </script>
+</body>
+</html>
